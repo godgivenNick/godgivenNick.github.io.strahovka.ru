@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<title>Pizza Police</title>
+
+	<!-- Для отзывчивости на мобилках -->
+	<meta name="viewport" content="
+								   width=device-width,
+								   initial-scale=1,
+								   shrink-to-fit=no">
+
+	<!-- Ключевые слова для SEO -->
+	<meta name="keywords" content=""/>
+
+	<!-- Описание страницы для оптимизации SEO -->
+	<meta name="description" content=""/>
+	
+	<meta name="author" content="Nick G.">
+	<link rel="stylesheet" href="css/main.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<!-- endbuild -->
+	<!--[if lt IE 9]>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+<main>
+
+	<nav class="nav-bar">
+		<nav class="wrapper f-row f-wrap">
+			<p class="logo nav__logo">PizzaPolice
+				<span></span>
+			</p>
+
+			<a href="tel:+78122004060" class="phone-num">(812) 200-40-60</a>
+
+			<ul id="menu" class="nav__menu f-row">
+				<li class="menu__item"><a href="#">Скидки</a></li>
+				<li class="menu__item"><a href="#">Новинки</a></li>
+				<li class="menu__item"><a href="#">Пицца полис</a></li>
+				<li class="menu__item"><a href="#">Напитки</a></li>
+			</ul>
+
+			<div class="basket">
+				<div class="count">3 пиццы</div>
+				<div class="sum-price">3 465 руб.</div>
+			</div>
+
+			<!-- <input type="checkbox" id="menu-toggle" />
+				<label for="menu-toggle" class="label-toggle burger"></label> -->
+
+			<a href="#modal-menu" type="button" class="burger"></a>
+			
+				<aside class="modal-mobile" id="modal-menu">
+
+					<div class="basket">
+						<div class="count">3 пиццы</div>
+					</div>
+
+
+					<ul id="menu" class="nav__menu f-col">
+						<li class="menu__item"><a href="#">Скидки</a></li>
+						<li class="menu__item"><a href="#">Новинки</a></li>
+						<li class="menu__item"><a href="#">Пицца полис</a></li>
+						<li class="menu__item"><a href="#">Напитки</a></li>
+					</ul>
+
+					<a href="tel:+78122004060" class="phone-num">(812) 200-40-60</a>
+
+				</aside>
+		
+		</nav>
+	</nav>
+
+
+	<section>
+		<div class="slider-content">
+			<h2>Набор пиццы на большую компанию</h2>
+			<p>Попробуйте потрясающий, невероятно вкусный, сочный и жирный
+				набор из 3 пицц. В подарок вы получаете 2 литра
+				холодного, освежающего "Буратино".
+			</p>
+			<ul class="goods">
+				<li><span>Овощная</span></li>
+				<li><span>Мясная</span></li>
+				<li><span>Вкусная</span></li>
+				<li><span>Буратино</span></li>
+			</ul>
+
+			<div class="form">
+				<a href="#modal" type="button" class="default-btn">Заказать пиццу</a>
+				<span class="form-price">12 700 <span>Руб.</span></span>
+			</div>
+
+		</div>
+
+		<img src="images/kombo-wombo.png" alt="kombo-wombo" class="slider-img">
+
+		<a href="" class="mobile">Заказать пиццу за <span>12 700 <span>Руб.</span></span></a>
+
+	</section>
+
+
+
+	<header class="main-header block-header">
+		<div class="wrapper">
+			<div class="block-header__wrapper ">
+				<span>Еще больше вкусной пиццы на этом экране</span>
+			</div>
+		</div>
+	</header>
+
+
+
+	<aside class="modal" id="modal">
+    
+        <h2>Набор пиццы на большую компанию</h2>
+    	 
+    	
+       		<span>Размер пиццы</span>
+				<select name="size">
+    				<option value="s1">Маленькая</option>
+    				<option value="s2" >Средняя</option>
+    				<option value="s3" selected>Огроменная</option>
+   				</select> 
+
+       		<span>Топпинги в пиццу</span>
+
+				<select name="size" size="1">
+					<option value="s3" selected>Подбери себе топпинг</option>
+    				<option value="s1">Лучочек</option>
+    				<option value="s2">Грибочек</option>
+    				<option value="s3">Бурундучочек</option>
+   				</select> 
+   
+
+       		<a href="#" type="button" class="submit-order">Добавить в заказ</a>
+    	
+	</aside>
+
+
+
+
+</main>
+
+
+</body>
+</html>
+
+
+
