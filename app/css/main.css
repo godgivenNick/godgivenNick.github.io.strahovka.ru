@@ -150,9 +150,6 @@ nav .label-toggle {
   background: -o-linear-gradient(#000000 0%, #000000 20%, transparent 20%, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 80%, #000000 80%, #000000 100%);
   background: linear-gradient(#000000 0%, #000000 20%, transparent 20%, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 80%, #000000 80%, #000000 100%);
 }
-.basket {
-  position: relative;
-}
 .basket .count {
   font-family: Roboto;
   font-style: normal;
@@ -160,10 +157,11 @@ nav .label-toggle {
   line-height: normal;
   font-size: 18px;
   color: #2C2C3D;
+  position: relative;
 }
-.basket .count:before {
+.basket .count span:before {
   position: absolute;
-  content: url(../images/basket.svg);
+  content: url(../images/basket.png);
   left: -40px;
   top: 5px;
 }
@@ -452,6 +450,7 @@ img.slider-img {
 .block-header .wrapper {
   width: 100%;
   height: 400px;
+  background-color: rgba(33, 33, 33, 0.75);
   display: flex;
 }
 @media screen and (max-width: 513px) {
@@ -644,18 +643,16 @@ a.burger {
   .modal-mobile .modal-top a span:last-child:before {
     content: url(../images/x-right.svg);
   }
-  .modal-mobile .modal-top .basket {
-    position: relative;
-  }
   .modal-mobile .modal-top .basket .count {
     margin-left: 37px;
     font-size: 32px;
+    position: relative;
   }
-  .modal-mobile .modal-top .basket .count:before {
+  .modal-mobile .modal-top .basket .count span:before {
     position: absolute;
-    content: url('../images/basket.png');
-    left: 0px;
-    top: 2px;
+    content: url(../images/basket.png);
+    top: 0;
+    left: -40px;
   }
   .modal-mobile .menu__item {
     margin-bottom: 32px;
