@@ -163,7 +163,7 @@ nav .label-toggle {
 }
 .basket .count:before {
   position: absolute;
-  content: url(../images/basket.png);
+  content: url(../images/basket.svg);
   left: -40px;
   top: 5px;
 }
