@@ -39,6 +39,7 @@ html, body {
 		// display: inline-block;
 		// }
 	}	
+	// overflow: hidden;
 }
 
 a {
@@ -127,11 +128,19 @@ ul {
 		
 	.nav__logo {
 		margin-right: 42px;
+		
+		@media screen and (max-width: 513px) {
+			margin-right: 48px;
+		}
 	}
 
 	.phone-num {
 		margin-right: 42px;
-
+		
+		@media screen and (max-width: 513px) {
+			margin-right: 68px;
+		}
+		
 		color: #2C2C3D;
 		font-family: Roboto;
 		font-style: normal;
@@ -183,7 +192,8 @@ ul {
 		
 		height: 30px;
 		width: 36px;
-		
+		// z-index: 100;
+	
 	    background: -webkit-linear-gradient(@black 0%, @black 20%, transparent 20%, transparent 40%, @black 40%, @black 60%, transparent 60%, transparent 80%, @black 80%, @black 100%);
 	    background: -o-linear-gradient(@black 0%, @black 20%, transparent 20%, transparent 40%, @black 40%, @black 60%, transparent 60%, transparent 80%, @black 80%, @black 100%);
 	    background: linear-gradient(@black 0%, @black 20%, transparent 20%, transparent 40%, @black 40%, @black 60%, transparent 60%, transparent 80%, @black 80%, @black 100%);
@@ -443,6 +453,8 @@ ul {
 		width: 448px;
 		height: 78px;
 		display: none;
+		
+
 		.submit-order;
 		
 		margin-left: 32px;
@@ -473,6 +485,7 @@ ul {
 
 
 		@media screen and (max-width: 513px) {
+			margin-top: 20px;
 			display: block;
 		}
 		
@@ -565,89 +578,91 @@ ul {
 
 
 	/* Стили для неактивного модального окна */
-	
 
-.modal {
-    background: #fff;
-    left: 50%;
-    margin: -250px 0 0 -40%;
-    position: absolute;
-    top: -50%;
-    width: 400px;
-    height: 395px;
-    
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    
-	padding: 33px 44px 31px 32px;
-	
-	display: flex;
-	.f-col;
-	-webkit-justify-content: flex-start;
-	        justify-content: flex-start;
-	-webkit-align-items: flex-start;
-	        align-items: flex-start;
-	
-	-webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
-		    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
-    
-    h2 {
-    	font-family: Roboto;
-		font-style: normal;
-		font-weight: bold;
-		line-height: normal;
-		font-size: 32px;
-
-		color: #2C2C3D;
-		text-align: start;
-
-		margin-bottom: 32px;
-    }
-
-    span {
-    	font-family: Roboto;
-		font-style: normal;
-		font-weight: bold;
-		line-height: normal;
-		font-size: 14px;
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
+// Модальное окошко с формой
+	.modal {
+	    background: #fff;
+	    left: 50%;
+	    margin: -250px 0 0 -40%;
+	    position: absolute;
+	    top: -50%;
+	    width: 400px;
+	    height: 395px;
+	    
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    
+		padding: 33px 44px 31px 32px;
 		
-		color: #2C2C3D;
+		display: flex;
+		.f-col;
+		-webkit-justify-content: flex-start;
+		        justify-content: flex-start;
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
 		
-		margin-bottom: 8px;
-    }
-
-    select {
-		width: 336px;
-		height: 42px;
-
-    	border: 1px solid #4B4B4B;
-		box-sizing: border-box;
-		border-radius: 4px;
-		
-		padding-left: 16px;
-		margin-bottom: 16px;
-		option {
-			font-family: Roboto;
+		-webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+			    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+	    
+	    h2 {
+	    	font-family: Roboto;
 			font-style: normal;
-			font-weight: normal;
-			line-height: 4px;
+			font-weight: bold;
+			line-height: normal;
+			font-size: 32px;
+	
+			color: #2C2C3D;
+			text-align: start;
+	
+			margin-bottom: 32px;
+	    }
+	
+	    span {
+	    	font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			line-height: normal;
 			font-size: 14px;
 			
-			color: #B0B0B6;
+			color: #2C2C3D;
 			
-			margin-bottom: 16px;
-		}
-    }
-    .submit-order {
-    	width: 336px;
-		height: 42px;
-		margin: auto;
-    } 
-} // modal
+			margin-bottom: 8px;
+	    }
 	
-	.submit-order {
-		    		background: #152DFF;
+	    select {
+			width: 336px;
+			height: 42px;
+	
+	    	border: 1px solid #4B4B4B;
+			box-sizing: border-box;
+			border-radius: 4px;
+			
+			padding-left: 16px;
+			margin-bottom: 16px;
+			option {
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 4px;
+				font-size: 14px;
+				
+				color: #B0B0B6;
+				
+				margin-bottom: 16px;
+			}
+	    }
+	    .submit-order {
+	    	width: 336px;
+			height: 42px;
+			margin: auto;
+	    } 
+	} // modal
+		
+		.submit-order {
+			background: #152DFF;
 			border: 1px solid #152DFF;
 			box-sizing: border-box;
 			border-radius: 4px;
@@ -675,23 +690,18 @@ ul {
 				
 				background: @white;
 			}
-	}
-
-	/* Активация модального окна в состоянии :target */
-	.modal:target {
-	    top: 50%;
-	    left: 75%;
-	    transition: all 0.7s ease-in-out;
-	    -moz-transition: all 0.7s ease-in-out;
-	    -webkit-transition: all 0.7s ease-in-out;
-	    
-	}
+		}
 	
-	.modal section {
-	    z-index: 200;
-	}
+		/* Активация модального окна в состоянии :target */
+		.modal:target {
+		    top: 50%;
+		    left: 75%;
+		    transition: all 0.7s ease-in-out;
+		    -moz-transition: all 0.7s ease-in-out;
+		    -webkit-transition: all 0.7s ease-in-out;  
+		}
 
-
+// мобильное меню ????
 	a.burger {
 		display: none;
 		
@@ -700,18 +710,27 @@ ul {
 		}
 	}
 	.modal-mobile {
-		left: 50%;
-   		margin: -250px 0 0 -40%;
+		display:none;
+	}
+	@media screen and (max-width: 513px) {
+	.modal-mobile {
+		overflow: hidden;
+		padding: 30px 35px 0 32px;
+		background: #fff;
+		right: 0%;
+		margin: 0 0 0 -40%;
+		top: 0;
    		position: absolute;
-   		top: 0;
    		width: 400px;
    		height: 100vh;
+   		
    		
    		        box-sizing: border-box;
    		   -moz-box-sizing: border-box;
    		-webkit-box-sizing: border-box;
    		
-   		
+   		-webkit-box-shadow: -111px 0px 16px rgba(0, 0, 0, 0.25);
+		        box-shadow: -111px 0px 16px rgba(0, 0, 0, 0.25);
    		.f-col;
    		
 		-webkit-justify-content: flex-start;
@@ -719,17 +738,87 @@ ul {
 		-webkit-align-items: flex-start;
 		        align-items: flex-start;
 		
-		display:none;
+		visibility: hidden;
+		.modal-top {
+			display: flex;
+			width: 100%;
+			padding-right: 25px;
+			.f-row;
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+			
+			a {
+				position: relative;
+				span:first-child {
+					position: absolute;
+					&:before {
+						content: url(../images/x-left.svg);
+					}
+				}
+				span:last-child {
+					position: absolute;
+					&:before {
+						content: url(../images/x-right.svg);
+					}
+				}
+			}
+			
+			.basket {
+				position: relative;
+				.count {
+					margin-left: 37px;
+					font-size: 32px;
+					&:before {
+						position: absolute;
+						content: url('../images/basket.png');
+						left:0px;
+						top: 2px;
+					}
+				}
+			}
+		}
+		.menu__item {
+			margin-bottom: 32px;
+			&:first-child { margin-top: 70px; }
+			-webkit-align-self: flex-start;
+			        align-self: flex-start;
+			a {
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: bold;
+				line-height: normal;
+				font-size: 32px;
+				
 
+				color: #2C2C3D;
+				
+				-webkit-transition: .4s ease-in;
+				   -moz-transition: .4s ease-in;
+				    -ms-transition: .4s ease-in;
+				     -o-transition: .4s ease-in;
+				        transition: .4s ease-in;
+				&:hover {
+					color: #152DFF;
+				}
+				
+			}
+		}
+
+		.phone-num {
+			margin-top: 64px;
+		}
 	}
 
 		/* Активация модального окна в состоянии :target */
 	.modal-mobile:target {
-	    top: 50%;
-	    left: 75%;
-	    transition: all 0.7s ease-in-out;
-	    -moz-transition: all 0.7s ease-in-out;
-	    -webkit-transition: all 0.7s ease-in-out;
+		visibility: visible;
+		margin: 0;
+	    top: 0;
+		right: 0;
+		// transition: all 0.7s ease-in-out;
+	 //    -moz-transition: all 0.7s ease-in-out;
+	 //    -webkit-transition: all 0.7s ease-in-out;
 	    
 	}
+}
 

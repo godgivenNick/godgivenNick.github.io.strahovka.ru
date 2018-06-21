@@ -87,6 +87,11 @@ nav .label-toggle {
 .nav__logo {
   margin-right: 42px;
 }
+@media screen and (max-width: 513px) {
+  .nav__logo {
+    margin-right: 48px;
+  }
+}
 .phone-num {
   margin-right: 42px;
   color: #2C2C3D;
@@ -96,6 +101,11 @@ nav .label-toggle {
   line-height: normal;
   letter-spacing: 1px;
   font-size: 18px;
+}
+@media screen and (max-width: 513px) {
+  .phone-num {
+    margin-right: 68px;
+  }
 }
 .phone-num:before {
   display: inline-block;
@@ -403,6 +413,7 @@ img.slider-img {
 }
 @media screen and (max-width: 513px) {
   .mobile {
+    margin-top: 20px;
     display: block;
   }
 }
@@ -571,9 +582,6 @@ img.slider-img {
   -moz-transition: all 0.7s ease-in-out;
   -webkit-transition: all 0.7s ease-in-out;
 }
-.modal section {
-  z-index: 200;
-}
 a.burger {
   display: none;
 }
@@ -583,30 +591,104 @@ a.burger {
   }
 }
 .modal-mobile {
-  left: 50%;
-  margin: -250px 0 0 -40%;
-  position: absolute;
-  top: 0;
-  width: 400px;
-  height: 100vh;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  display: flex;
-  -webkit-flex-flow: nowrap column;
-  -ms-flex-flow: nowrap column;
-  flex-flow: nowrap column;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
   display: none;
 }
-/* Активация модального окна в состоянии :target */
-.modal-mobile:target {
-  top: 50%;
-  left: 75%;
-  transition: all 0.7s ease-in-out;
-  -moz-transition: all 0.7s ease-in-out;
-  -webkit-transition: all 0.7s ease-in-out;
+@media screen and (max-width: 513px) {
+  .modal-mobile {
+    overflow: hidden;
+    padding: 30px 35px 0 32px;
+    background: #fff;
+    right: 0%;
+    margin: 0 0 0 -40%;
+    top: 0;
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-box-shadow: -111px 0px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: -111px 0px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    -webkit-flex-flow: nowrap column;
+    -ms-flex-flow: nowrap column;
+    flex-flow: nowrap column;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    visibility: hidden;
+  }
+  .modal-mobile .modal-top {
+    width: 100%;
+    padding-right: 25px;
+    display: flex;
+    -webkit-flex-flow: nowrap row;
+    -ms-flex-flow: nowrap row;
+    flex-flow: nowrap row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .modal-mobile .modal-top a {
+    position: relative;
+  }
+  .modal-mobile .modal-top a span:first-child {
+    position: absolute;
+  }
+  .modal-mobile .modal-top a span:first-child:before {
+    content: url(../images/x-left.svg);
+  }
+  .modal-mobile .modal-top a span:last-child {
+    position: absolute;
+  }
+  .modal-mobile .modal-top a span:last-child:before {
+    content: url(../images/x-right.svg);
+  }
+  .modal-mobile .modal-top .basket {
+    position: relative;
+  }
+  .modal-mobile .modal-top .basket .count {
+    margin-left: 37px;
+    font-size: 32px;
+  }
+  .modal-mobile .modal-top .basket .count:before {
+    position: absolute;
+    content: url('../images/basket.png');
+    left: 0px;
+    top: 2px;
+  }
+  .modal-mobile .menu__item {
+    margin-bottom: 32px;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+  }
+  .modal-mobile .menu__item:first-child {
+    margin-top: 70px;
+  }
+  .modal-mobile .menu__item a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 32px;
+    color: #2C2C3D;
+    -webkit-transition: 0.4s ease-in;
+    -moz-transition: 0.4s ease-in;
+    -ms-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+  }
+  .modal-mobile .menu__item a:hover {
+    color: #152DFF;
+  }
+  .modal-mobile .phone-num {
+    margin-top: 64px;
+  }
+  /* Активация модального окна в состоянии :target */
+  .modal-mobile:target {
+    visibility: visible;
+    margin: 0;
+    top: 0;
+    right: 0;
+  }
 }
